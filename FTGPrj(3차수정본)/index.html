@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="./app.js"></script>
+    <link rel="short icon" href="#">
+    <link rel="stylesheet" href="./font/text.css" type="text/css">
+    <style>
+        .d-none{
+            display: none;
+        }
+        body{
+		margin : 0;
+	    }
+        img{
+            display: none;
+        }
+        @font-face { /* 배민 기랑해랑체 폰트 적용 */
+            font-family: "bmkrhr";
+            src: url("font/BMKIRANGHAERANG-TTF.ttf");
+        } 
+    </style>
+    
+</head>
+<body>
+    <!-- 버튼 이미지들 -->
+    <img src="./img/btnimg/fwdbtnimg.png" id="forwardbtn" style = "display: none;">
+    <img src="./img/btnimg/fwdbtnhoverimg.png" id="fwdhoverbtn" style = "display: none;">
+    <img src="./img/btnimg/backbtnimg.png" id="backbtn" style = "display: none;">
+    <img src="./img/btnimg/backbtnhoverimg.png" id="backhoverbtn" style="display: none;">
+    <img src="./img/btnimg/playbtnimg.png" id="playbtn" style="display: none;">
+    <img src="./img/btnimg/pausebtnimg.png" id="pausebtn" style = "display: none;">
+    <img src="./img/btnimg/replaybtnimg.png" id="replaybtn" style = "display: none;">
+
+    <!-- 스토리 작화 자료 -->
+    <img id="title" src="./img/Title.jpg">
+    <img id="leavehome" src="./img/S1.jpg">
+    <img id="pig1home" src="./img/s2.jpg">
+    <img id="pig2home" src="./img/S3.jpg">
+    <img id="pig3home" src="./img/S4.jpg">
+    <img id="wolfAppear" src="./img/S5.jpg">
+    <img id="wolfpig1talk" src="./img/S6.jpg">
+    <img id="pig1homegone" src="./img/S7.jpg">
+    <img id="pig2homegone" src="./img/S8.jpg">
+    <img id="wolfpig3talk" src="./img/S9.jpg">
+    <img id="pig3homealive" src="./img/S10.jpg">
+    <img id="wolfangry" src="./img/S11.jpg">
+    <img id="wolffire" src="./img/S12.jpg">
+    <img id="ending" src="./img/S12.jpg">
+
+    <!-- 게임 관련 브금 -->
+    <audio id="pighomeclearbgm" src="bgm/homeclearbgm.mp3"></audio>
+    
+    <!-- 집 재료 모으기 게임 -->
+    <img id="pig1homeclearimg" src="img/pig1home.png">
+    <img id="pig2homeclearimg" src="img/pig2home.png">
+    <img id="pig3homeclearimg" src="img/pig3home.png">
+    
+    <!-- 바람부는게임 자료 -->
+    <!-- 게임 맨 밑 배경 -->
+    <img id="bg-bg-red" src="./img/w-b-b-gaugeground.png"> 
+    <!-- 배경 -->
+    <img id="w-bg-map" src="./img/w-map7-nu.png">
+    <img id="w-bg-gauge" src="img/w-redgauge-nuky.png">
+    <img id="w-bg-wolf" src="img/w-windwolf.png">
+    <!-- 버튼 -->
+    <img id="w-p-btn" src="img/w-windga2-nu.png">
+    <!-- <img id="w-p-gauge" src="img/w-windga2-nu.png"> -->
+    <img id="w-p-clear" src="img/w-clear.png">
+    <!-- 바람소리 -->
+    <audio id="windsound" src="bgm/휘이이+휘리리릭.mp3"></audio>
+    <audio id="windsound2" src="bgm/바람.m4a"></audio>
+    <!-- 놀라는 소리 -->
+    <audio id="questionsound" src="bgm/huh-128934.mp3"></audio>
+
+    <!-- 불 피우기 게임 자료 -->
+    <img class="basic-fireplace" src="./img/game/fireplace/basic-fireplace.webp" alt="basic-fireplace">
+    <img class="fireplace" src="./img/game/fireplace/fireplace.png" alt="fireplace">
+    <img class="big-fire" src="./img/game/fireplace/big-fire.png" alt="big-fire">
+    <img class="middle-fire" src="./img/game/fireplace/middle-fire.webp" alt="middle-fire">
+    <img class="fire-wolf" src="./img/game/fireplace/fire-wolf.png" alt="fire-wolf">
+
+    <audio class="fire-audio-bg" src="audio/game/fire/bg.mp3"></audio>
+    <audio class="fire-audio-click" src="audio/game/fire/click.wav"></audio>
+
+    <img id="info-Bg" src="./img/pighomegameInfo.png">
+    
+    <!-- <canvas class="game-canvas d-no" width="1400" height="700" style = "display: none;"></canvas>     -->
+    <canvas class="pighomegame-canvas d-none" width="1400" height="700"></canvas>
+    <canvas class="wind-game-canvas d-none" width="1400" height="700" tabindex="0" ></canvas>
+    <canvas class="fire-game-canvas d-none" width="1400" height="700"></canvas>
+    <canvas class="story-canvas" width="1400" height="700"></canvas>    
+    
+    <script type="module" src = "pighomegame.js"></script>
+    
+</body>
+</html>
